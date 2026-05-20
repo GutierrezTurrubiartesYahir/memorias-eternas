@@ -3,20 +3,19 @@
   background: transparent;
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
-
-  padding: 60px 0 80px; /* separación arriba y abajo */
+  padding: 60px 0 80px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .planeacion-title {
-  color: #111111; /* Modificado: Negro elegante */
+  color: #111111;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
 .planeacion-sub {
-  color: #444444; /* Modificado: Gris de alta legibilidad */
+  color: #444444;
   font-size: 1.05rem;
   max-width: 650px;
 }
@@ -26,18 +25,14 @@
 .card-plan {
   position: relative;
   padding: 2rem 1.5rem 1.8rem;
-
-  background: rgba(255, 255, 255, 0.75); /* Modificado: Fondo claro premium */
+  background: rgba(255, 255, 255, 0.75);
   border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.08); /* Modificado: Borde sutil oscuro */
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-
-  color: #111111; /* Modificado: Texto en negro */
+  color: #111111;
   text-align: left;
-
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
   transition: 0.25s ease-in-out;
   height: 100%;
   overflow: hidden;
@@ -45,12 +40,7 @@
 
 .card-plan:hover {
   transform: translateY(-4px);
-  border-color: rgba(
-    164,
-    148,
-    185,
-    0.6
-  ); /* Modificado: Destello púrpura al pasar el cursor */
+  border-color: rgba(164, 148, 185, 0.6);
   box-shadow: 0 12px 28px rgba(164, 148, 185, 0.12);
 }
 
@@ -63,8 +53,6 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-
-  /* Modificado: Badge en lavanda pastel con texto oscuro */
   background: hsla(265, 55%, 86%, 1);
   color: #111111;
   font-weight: 600;
@@ -87,30 +75,27 @@
   padding-left: 0;
   margin: 1.2rem 0 1.4rem;
   font-size: 0.95rem;
-  color: #444444; /* Modificado: Texto de lista en gris legible */
+  color: #444444;
 }
 
 .plan-list li {
   margin-bottom: 0.4rem;
 }
 
-/* Botón de los planes (Lavanda pastel que pasa a transparente con borde) */
+/* Botón de los planes */
 .plan-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.7rem 1.4rem;
-
-  background: hsla(265, 55%, 86%, 1); /* Modificado: Tono lavanda base */
+  background: hsla(265, 55%, 86%, 1);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-
   color: #111111;
   font-weight: 600;
   border-radius: 999px;
   text-decoration: none;
   border: 1px solid transparent;
-
   transition: 0.2s ease-in-out;
 }
 
@@ -121,14 +106,13 @@
   transform: translateY(-2px);
 }
 
-/* ====== BOTÓN CONTACTO (Reutilizado) ====== */
-
+/* ====== BOTÓN CONTACTO ====== */
 .btn-contacto {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.9rem 1.4rem;
-  background: #111111; /* Modificado: Negro elegante sólido */
+  background: #111111;
   color: #ffffff;
   font-weight: 700;
   border-radius: 12px;
@@ -144,23 +128,30 @@
   transform: translateY(-5px) scale(1.05);
 }
 
-/* Botón "Continuar" en los pasos del plan */
-.planeacion-section .btn-next-step {
-  background-color: hsla(265, 55%, 86%, 1); /* Modificado: Lavanda pastel */
-  border-color: transparent;
-  color: #111111; /* Modificado: Texto en negro para contraste */
+/* Botón Plan Personalizado */
+#btnPlanPersonalizado {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border: 2px solid transparent !important;
+}
 
+#btnPlanPersonalizado:hover {
+  background-color: transparent !important;
+  color: #111111 !important;
+  border-color: #111111 !important;
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Botón Continuar */
+.planeacion-section .btn-next-step {
+  background-color: hsla(265, 55%, 86%, 1);
+  border-color: transparent;
+  color: #111111;
   border-radius: 999px;
   font-weight: 600;
   padding: 0.45rem 1.8rem;
-
   box-shadow: 0 4px 12px rgba(164, 148, 185, 0.2);
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .planeacion-section .btn-next-step:not(:disabled):hover {
@@ -179,24 +170,35 @@
   color: #888888;
 }
 
-/* ====== TEXTO GLASS / RESUMEN DERECHO ====== */
+/* Botón Success (Plan listo) */
+.planeacion-section .btn-success {
+  background-color: #111111 !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 999px;
+}
 
+.planeacion-section .btn-success:hover {
+  background-color: transparent !important;
+  border-color: #111111 !important;
+  color: #111111 !important;
+}
+
+/* ====== TEXTO GLASS / RESUMEN DERECHO ====== */
 .texto_c {
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
-  background: rgba(255, 255, 255, 0.75); /* Modificado: Fondo claro glass */
-  border: 1px solid rgba(0, 0, 0, 0.08); /* Modificado: Borde sutil oscuro */
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
   transition: 0.25s ease-in-out;
-  color: #111111; /* Modificado: Texto en negro */
+  color: #111111;
 }
 
 .texto_c:hover {
@@ -218,7 +220,6 @@
   color: #111111;
 }
 
-/* Sticky en escritorio */
 @media (min-width: 992px) {
   .resumen-plan {
     position: sticky;
@@ -227,24 +228,19 @@
 }
 
 /* ====== ACORDEÓN PLAN PERSONALIZADO ====== */
-
 .planeacion-section .accordion {
   row-gap: 16px;
   margin-top: 1.5rem;
 }
 
-/* Tarjeta glass por paso */
 .planeacion-section .accordion-item {
-  border: 1px solid rgba(0, 0, 0, 0.08); /* Modificado: Borde fino */
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 18px;
   overflow: hidden;
-
-  background: rgba(255, 255, 255, 0.7); /* Modificado: Fondo claro glass */
+  background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
   transition: 0.25s ease-in-out;
   margin-bottom: 1rem;
 }
@@ -254,14 +250,13 @@
   border-color: rgba(164, 148, 185, 0.5);
 }
 
-/* Header del acordeón */
 .planeacion-section .accordion-button {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.6),
     rgba(0, 0, 0, 0.02)
-  ); /* Modificado: Gradiente claro suave */
-  color: #111111; /* Modificado: Texto negro */
+  );
+  color: #111111;
   font-weight: 600;
   border: none;
   box-shadow: none;
@@ -273,7 +268,7 @@
 }
 
 .planeacion-section .accordion-button::after {
-  filter: none; /* Modificado: Flecha oscura nativa para fondo claro */
+  filter: none;
 }
 
 .planeacion-section .accordion-button:focus {
@@ -281,15 +276,13 @@
   outline: none;
 }
 
-/* Cuerpo del acordeón */
 .planeacion-section .accordion-body {
   padding: 1.25rem 1.5rem 1.5rem 1.5rem;
-  color: #444444; /* Modificado: Texto interno gris oscuro */
+  color: #444444;
   font-size: 0.95rem;
 }
 
-/* ====== OPCIONES DEL PLAN (RADIOS / CHECKBOXES) ====== */
-
+/* ====== OPCIONES DEL PLAN ====== */
 .planeacion-section .form-check {
   margin-bottom: 0.6rem;
 }
@@ -299,101 +292,60 @@
   margin-top: 0;
 }
 
-/* Texto de la opción */
 .planeacion-section .form-check-label {
   display: inline-block;
   width: 100%;
   padding: 0.45rem 0.75rem;
   border-radius: 12px;
-
-  background: rgba(
-    0,
-    0,
-    0,
-    0.02
-  ); /* Modificado: Sutil fondo oscuro sobre la card blanca */
-  color: #444444; /* Modificado: Texto legible */
+  background: rgba(0, 0, 0, 0.02);
+  color: #444444;
   font-size: 0.95rem;
-
-  transition:
-    background 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease,
-    color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-/* Hover interactivo */
 .planeacion-section .form-check:hover .form-check-label {
-  background: rgba(164, 148, 185, 0.08); /* Destello púrpura sutil */
+  background: rgba(164, 148, 185, 0.08);
   color: #111111;
 }
 
-/* El control circular cuando está seleccionado */
 .planeacion-section .form-check-input:checked {
-  background-color: rgb(164, 148, 185); /* Modificado: Control en púrpura */
+  background-color: rgb(164, 148, 185);
   border-color: rgb(164, 148, 185);
 }
 
-/* La opción seleccionada se destaca elegantemente */
 .planeacion-section .form-check-input:checked + .form-check-label {
-  background: rgba(164, 148, 185, 0.15); /* Fondo lavanda/púrpura suave */
+  background: rgba(164, 148, 185, 0.15);
   color: #111111;
   font-weight: 600;
   box-shadow: 0 0 0 1px rgba(164, 148, 185, 0.3);
   transform: translateY(-1px);
-}
-
-/* Ajuste secundario de selección redondeada */
-.planeacion-section .form-check-input:checked + .form-check-label {
   border-radius: 999px;
   padding: 0.25rem 0.75rem;
 }
 
-/* Botón verde / final cambiado a Púrpura Sólido elegante */
-.planeacion-section .btn-success {
-  background-color: #111111; /* Modificado: Negro elegante para la acción final */
-  border-color: transparent;
-  color: #ffffff;
-  font-weight: 600;
-  border-radius: 999px;
-}
-
-.planeacion-section .btn-success:hover {
-  background-color: transparent;
-  border-color: #111111;
-  color: #111111;
-}
-
-/* Texto pequeño */
 .planeacion-section .small,
 .planeacion-section small {
-  color: #666666 !important; /* Modificado: Gris intermedio */
+  color: #666666 !important;
 }
 
 /* ====== RESPONSIVE ====== */
-
 @media (max-width: 767.98px) {
   .planeacion-section {
     padding-inline: 15px;
   }
-
   .planeacion-title {
     font-size: 1.6rem;
   }
-
   .card-plan {
     padding: 1.5rem 1.3rem;
   }
 }
 
-/* ===========================
-   IMPRESIÓN SOLO DEL CONTRATO (Mantiene el estándar de papel blanco y tinta negra)
-   =========================== */
+/* ====== IMPRESIÓN ====== */
 @media print {
   body {
     background: #ffffff !important;
   }
-
   nav,
   header,
   footer,
@@ -406,7 +358,6 @@
   .swal-overlay {
     display: none !important;
   }
-
   .modal,
   .modal-dialog,
   .modal-content,
@@ -420,7 +371,6 @@
     border: none !important;
     background: #ffffff !important;
   }
-
   #textoContrato {
     max-height: none !important;
     overflow: visible !important;
@@ -431,11 +381,9 @@
     font-size: 11pt;
     line-height: 1.5;
   }
-
   #textoContrato .contrato-documento {
     margin: 0 !important;
   }
-
   @page {
     margin: 10mm;
   }
@@ -460,44 +408,31 @@
   margin-top: 1rem;
 }
 
-/* ===========================
-   ESTILO DEL MODAL CONTRATO (Estilo Claro y Limpio)
-   =========================== */
-
-/* Fondo detrás del modal */
+/* ====== MODAL CONTRATO ====== */
 .modal-backdrop.show {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Caja principal del modal */
 .contrato-modal {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.95
-  ); /* Modificado: Fondo claro premium */
-  color: #111111; /* Modificado: Texto en negro */
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #111111;
   border-radius: 18px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Bordes internos */
 .contrato-modal .modal-header,
 .contrato-modal .modal-body,
 .contrato-modal .modal-footer {
   border-color: rgba(0, 0, 0, 0.06);
 }
 
-/* Título */
 .contrato-modal .modal-title {
   font-weight: 700;
   letter-spacing: 0.5px;
   color: #111111;
 }
 
-/* Inputs consistentes con la marca en fondo claro */
 .contrato-modal .form-control,
 .contrato-modal .form-select {
   background-color: #ffffff;
@@ -515,7 +450,6 @@
   box-shadow: 0 0 0 3px rgba(164, 148, 185, 0.3);
 }
 
-/* Lista de métodos de pago */
 .contrato-modal .list-group-item {
   background-color: #ffffff;
   border-color: rgba(0, 0, 0, 0.06);
@@ -526,7 +460,6 @@
   background-color: rgba(0, 0, 0, 0.02);
 }
 
-/* Radios púrpuras */
 .contrato-modal .form-check-input {
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.25);
@@ -537,14 +470,12 @@
   border-color: rgb(164, 148, 185);
 }
 
-/* Caja donde se muestra el contrato en pantalla */
 .contrato-caja {
   background-color: #fafafa;
   border-color: rgba(0, 0, 0, 0.1) !important;
   color: #444444;
 }
 
-/* Botones del modal */
 .contrato-modal .btn-outline-secondary {
   border-color: rgb(164, 148, 185);
   color: #111111;
@@ -556,7 +487,7 @@
 }
 
 .contrato-modal .btn-primary {
-  background-color: hsla(265, 55%, 86%, 1); /* Modificado: Lavanda pastel */
+  background-color: hsla(265, 55%, 86%, 1);
   border-color: transparent;
   color: #111111;
   font-weight: 600;
@@ -566,4 +497,27 @@
   background-color: transparent;
   border-color: rgb(164, 148, 185);
   color: rgb(164, 148, 185);
+}
+
+.btn-light {
+  text-decoration-line: none;
+  background-color: rgb(164, 148, 185);
+}
+
+/* Color para "Ver más" (el botón primario de acción) */
+.ver-mas-opciones.btn-outline-light {
+  color: #ffffff; /* Texto */
+  border-color: rgb(164, 148, 185); /* Color de tu marca */
+  background-color: hsla(265, 55%, 86%, 1);
+}
+
+.ver-mas-opciones.btn-outline-light:hover {
+  color: rgb(164, 148, 185);
+  background-color: #fff; /* Color para el efecto hover */
+  border-color: hsla(265, 55%, 86%, 1);
+}
+
+/* Busca el botón específicamente y cambia su color */
+.btn.btn-link.link-light {
+  color: #212529 !important; /* Sustituye este valor por el color de tu marca */
 }
